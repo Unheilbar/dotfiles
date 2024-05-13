@@ -20,3 +20,24 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.format({async = false})
   end
 })
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+	pattern="*.eul",
+	callback = function()
+	 vim.schedule(function()
+		 vim.cmd([[set syntax=eulang]])
+	 end)
+	end
+})
+
+vim.api.nvim_create_autocmd("BufRead", {
+	pattern="*.eul",
+	callback = function()
+	 vim.schedule(function()
+		 vim.cmd([[set syntax=eulang]])
+	 end)
+	end
+})
+
+
+
