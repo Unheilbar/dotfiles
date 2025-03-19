@@ -1,11 +1,11 @@
 local lsp_zero = require('lsp-zero')
 
 
-require('mason').setup({})                  
+require('mason').setup({})
 require('mason-lspconfig').setup({
 -- Replace the language servers listed here 
 -- with the ones you want to install
-      ensure_installed = {'gopls', 'rust_analyzer', 'clangd', "lua_ls"},
+      ensure_installed = {'gopls','ols', 'rust_analyzer', 'clangd', "lua_ls"},
       handlers = {
         lsp_zero.default_setup,
 	gopls = function()

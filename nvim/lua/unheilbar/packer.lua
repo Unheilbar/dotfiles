@@ -20,6 +20,8 @@ use { "rose-pine/neovim", as = "rose-pine",
 
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
+use { 'timtro/glslView-nvim', ft = 'glsl' }
+
 use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v3.x',
